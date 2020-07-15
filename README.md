@@ -8,6 +8,16 @@ Project created with:
 - Java 11.0.7
 - Android SDK 29
 
+## Setup Instructions
+
+### Install dependencies
+
+```
+git clone https://github.com/matheusma37/Helfen.git
+cd Helfen
+npm install
+```
+
 Use this [link](https://reactnative.dev/docs/environment-setup) to learn how to run the application on your device or emulator.
 
-## Work still in progress
+### Work still in progress
