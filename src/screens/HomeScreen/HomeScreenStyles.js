@@ -1,27 +1,12 @@
-import { StyleSheet, Dimensions } from 'react-native';
+import { StyleSheet } from 'react-native';
 
-const screenWidthByTwo = Math.round(Dimensions.get('window').width / 2);
+import { Colors, Fonts, Sizes } from '../../utils/constants';
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#E5E5E5',
+    backgroundColor: Colors.softGray,
     flex: 1,
     alignItems: 'center'
-  },
-  logo: {
-    flex: 0.4,
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
-  logoImage: {
-    width: screenWidthByTwo,
-    height: screenWidthByTwo
-  },
-  logoText: {
-    color: '#FFFFFF',
-    marginTop: 10,
-    fontSize: 24,
-    fontFamily: 'Montserrat-Regular'
   },
   welcome: {
     flex: 0.2,
@@ -29,49 +14,42 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end'
   },
   whiteMidText: {
-    color: '#FFFFFF',
-    fontSize: 18,
-    fontFamily: 'Montserrat-Regular'
+    color: Colors.white,
+    fontSize: Sizes.midText,
+    fontFamily: Fonts.montserratReg
   },
   bottom: {
     flex: 0.4,
-    justifyContent: "flex-end",
+    justifyContent: 'flex-end',
     alignItems: 'center'
   },
-  button: {
-    height: 55,
-    width: 195,
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderRadius: 5
-  },
   createAccount: {
-    backgroundColor: '#19856B',
-    marginBottom: 20
+    backgroundColor: Colors.darkGreen,
+    marginBottom: Sizes.midMargin
   },
   moreInfo: {
-    backgroundColor: '#FFFFFF',
-    borderColor: '#19856B',
+    backgroundColor: Colors.white,
+    borderColor: Colors.darkGreen,
     borderWidth: 2,
-    marginBottom: 10
+    marginBottom: Sizes.midMargin
   },
   greenMidText: {
-    color: '#19856B',
-    fontSize: 18,
-    fontFamily: 'Montserrat-Regular'
+    color: Colors.darkGreen,
+    fontSize: Sizes.midText,
+    fontFamily: Fonts.montserratReg
   },
   enterContainer: {
     flexDirection: 'row',
     alignItems: 'baseline',
-    marginBottom: 20
+    marginBottom: Sizes.midMargin
   },
   enterText: {
-    color: '#A3A3A3',
-    fontSize: 14
+    color: Colors.midGray,
+    fontSize: Sizes.smallText
   },
   enterButton: {
-    color: '#19856B',
-    fontSize: 18
+    color: Colors.darkGreen,
+    fontSize: Sizes.midText
   }
 })
 

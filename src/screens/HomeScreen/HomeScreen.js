@@ -1,20 +1,16 @@
 import React from 'react';
-import { View, Text, Image, TouchableOpacity, StatusBar } from 'react-native'
+import { View, Text, TouchableOpacity, StatusBar } from 'react-native'
+
+import { Logo, SquareButton } from '../../components/HomeScreen'
 
 import styles from './HomeScreenStyles';
-import images from '../../assets/images';
 
 export default class HomeScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
         <StatusBar barStyle='light-content' backgroundColor='rgba(0,0,0,0.2)' />
-        <View style={styles.logo}>
-          <Image
-            style={styles.logoImage}
-            source={images.logo} />
-          <Text style={styles.logoText}>HELFEN</Text>
-        </View>
+        <Logo />
         <View style={styles.welcome}>
           <Text style={styles.whiteMidText}>
             Olá! Bem-vindo ao Helfen!
@@ -24,12 +20,12 @@ export default class HomeScreen extends React.Component {
           </Text>
         </View>
         <View style={styles.bottom}>
-          <TouchableOpacity style={[styles.button, styles.moreInfo]}>
+          <SquareButton style={styles.moreInfo}>
             <Text style={styles.greenMidText}>Quero saber mais!</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={[styles.button, styles.createAccount]}>
+          </SquareButton>
+          <SquareButton style={styles.createAccount}>
             <Text style={styles.whiteMidText}>Criar minha conta</Text>
-          </TouchableOpacity>
+          </SquareButton>
           <View style={styles.enterContainer}>
             <Text>Já sou usuário </Text>
             <TouchableOpacity>
