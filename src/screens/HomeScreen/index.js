@@ -15,7 +15,7 @@ import {
   styles
 } from './styles';
 
-export default HomeScreen = () => {
+export default HomeScreen = ({ navigation }) => {
   return (
     <Container>
       <StatusBar barStyle='light-content' backgroundColor='rgba(0,0,0,0.15)' />
