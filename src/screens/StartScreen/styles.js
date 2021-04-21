@@ -10,13 +10,14 @@ export const Container = styled.SafeAreaView`
 export const Welcome = styled.View`
   flex: 0.2;
   align-items: center;
-  margin-top: 50px
+  margin-top: 50px;
+  margin-bottom: 25px;
 `;
 
 export const WhiteMidText = styled.Text`
   color: #FFF;
   font-size: 18px;
-  font-family: Montserrat-Regular
+  font-family: Montserrat-Regular;
 `;
 
 export const Footer = styled.View`
