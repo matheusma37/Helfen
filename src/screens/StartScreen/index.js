@@ -1,7 +1,7 @@
 import React from 'react';
-import { TouchableOpacity, StatusBar } from 'react-native'
+import { TouchableOpacity, StatusBar } from 'react-native';
 
-import Logo from './components/Logo'
+import Logo from './components/Logo';
 
 import {
   Container,
@@ -15,7 +15,7 @@ import {
   styles
 } from './styles';
 
-export default HomeScreen = ({ navigation }) => {
+export default StartScreen = ({ navigation }) => {
   return (
     <Container>
       <StatusBar barStyle='light-content' backgroundColor='rgba(0,0,0,0.15)' />
@@ -33,7 +33,7 @@ export default HomeScreen = ({ navigation }) => {
           <GreenMidText>Quero saber mais!</GreenMidText>
         </SquareButton>
         <SquareButton style={styles.createAccount}>
-          <WhiteMidText>Criar minha conta</WhiteMidText>
+          <WhiteMidText onPress={() => navigation.navigate('SignUp')}>Criar minha conta</WhiteMidText>
         </SquareButton>
         <EnterContainer>
           <EnterText>Já sou usuário </EnterText>
