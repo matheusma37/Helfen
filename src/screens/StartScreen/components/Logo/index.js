@@ -1,15 +1,15 @@
 import React from 'react';
-import { View, Image, Text } from 'react-native'
+import { View, Image, Text } from 'react-native';
 
-import images from '../../assets/images';
-import styles from './LogoStyles'
+import logo from '../../../../assets/images/logo.png';
+import styles from './styles';
 
 const Logo = () => {
   return (
     <View style={styles.logo}>
       <Image
         style={styles.logoImage}
-        source={images.logo} />
+        source={logo} />
       <Text style={styles.logoText}>HELFEN</Text>
     </View>
   )
