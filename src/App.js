@@ -1,8 +1,9 @@
 import 'react-native-gesture-handler';
 import React, { useState } from 'react';
-import Icon from 'react-native-vector-icons/MaterialIcons';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+
+import ArrowBack from './components/ArrowBack';
 
 // import HomeScreen from './screens/HomeScreen';
 import StartScreen from './screens/StartScreen';
@@ -35,12 +36,7 @@ export default App = () => {
                 backgroundColor: '#7BB7D9',
               },
               headerLeft: (props) => (
-                <Icon
-                  {...props}
-                  name={'west'}
-                  color="#FFF"
-                  size={35}
-                  style={{ marginLeft: 10 }} />
+                <ArrowBack {...props} />
               )
             }
           } />
