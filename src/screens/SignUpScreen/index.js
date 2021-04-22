@@ -9,9 +9,10 @@ import {
   ButtonGroup,
   RoundedButton,
   Footer,
-  lightBlue,
   styles
 } from './styles';
+
+import { lightBlue } from '../../assets/colors';
 
 export default SignUpScreen = ({ navigation }) => {
   return (
@@ -22,7 +23,9 @@ export default SignUpScreen = ({ navigation }) => {
         <WhiteText>Primeiro, escolha uma das opções:</WhiteText>
       </TopMessage>
       <ButtonGroup>
-        <RoundedButton style={[styles.patientButton, styles.shadowedButton]}>
+        <RoundedButton
+          style={[styles.patientButton, styles.shadowedButton]}
+          onPress={() => navigation.navigate('Invite')}>
           <WhiteText>Eu tenho um convite!</WhiteText>
         </RoundedButton>
         <RoundedButton style={[styles.psychologistButton, styles.shadowedButton]}>

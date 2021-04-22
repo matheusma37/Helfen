@@ -1,9 +1,7 @@
 import styled from 'styled-components/native';
 import { StyleSheet } from 'react-native';
 
-export const darkGreen = '#19856B';
-export const lightOrange = '#F2994A';
-export const lightBlue = '#7BB7D9';
+import { lightBlue, darkGreen, lightOrange } from '../../assets/colors';
 
 export const Container = styled.SafeAreaView`
   background-color: ${lightBlue};

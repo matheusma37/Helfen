@@ -4,7 +4,9 @@ import { createStackNavigator } from '@react-navigation/stack';
 import ArrowBack from '../../components/ArrowBack';
 import StartScreen from '../../screens/StartScreen';
 import SignUpScreen from '../../screens/SignUpScreen';
-import InviteScreen from '../../screens/SignUpScreen';
+import InviteScreen from '../../screens/InviteScreen';
+
+import { lightBlue, lightOrange } from '../../assets/colors'
 
 const Stack = createStackNavigator();
 
@@ -19,7 +21,7 @@ AuthRoutes = () => {
           {
             title: null,
             headerStyle: {
-              backgroundColor: '#7BB7D9',
+              backgroundColor: lightBlue,
             },
             headerLeft: (props) => (
               <ArrowBack {...props} />
@@ -33,7 +35,7 @@ AuthRoutes = () => {
           {
             title: null,
             headerStyle: {
-              backgroundColor: '#7BB7D9',
+              backgroundColor: lightOrange,
             },
             headerLeft: (props) => (
               <ArrowBack {...props} />
