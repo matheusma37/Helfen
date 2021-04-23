@@ -10,27 +10,31 @@ import { lightBlue, lightOrange } from '../../assets/colors'
 
 const Stack = createStackNavigator();
 
-AuthRoutes = () => {
+const AuthRoutes = ({ setLoading }) => {
   return (
     <Stack.Navigator initialRouteName="Start">
-      <Stack.Screen name="Start" component={StartScreen} options={{ headerShown: false }} />
+      <Stack.Screen
+        name="Start"
+        options={{ headerShown: false }}>
+        {(props) => <StartScreen {...props} setLoading={setLoading} />}
+      </Stack.Screen>
       <Stack.Screen
         name="SignUp"
-        component={SignUpScreen}
         options={
           {
             title: null,
             headerStyle: {
-              backgroundColor: lightBlue,
+              backgroundColor: lightBlue
             },
             headerLeft: (props) => (
               <ArrowBack {...props} />
             )
           }
-        } />
+        } >
+        {(props) => <SignUpScreen {...props} setLoading={setLoading} />}
+      </Stack.Screen>
       <Stack.Screen
         name="Invite"
-        component={InviteScreen}
         options={
           {
             title: null,
@@ -41,7 +45,9 @@ AuthRoutes = () => {
               <ArrowBack {...props} />
             )
           }
-        } />
+        } >
+        {(props) => <InviteScreen {...props} setLoading={setLoading} />}
+      </Stack.Screen>
     </Stack.Navigator>
   );
 }

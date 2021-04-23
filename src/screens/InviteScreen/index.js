@@ -14,8 +14,9 @@ import {
 
 import { lightOrange, midOrange, darkOrange } from '../../assets/colors';
 
-export default SignUpScreen = ({ navigation }) => {
+export default SignUpScreen = ({ navigation, setLoading }) => {
   const [invite, onChangeInvite] = useState(null);
+  setTimeout(() => setLoading(true), 3000);
 
   return (
     <Container>

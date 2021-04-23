@@ -5,9 +5,11 @@ import { NavigationContainer } from '@react-navigation/native';
 import AuthRoutes from './routes/AuthRoutes'
 
 // import HomeScreen from './screens/HomeScreen';
+import LoadingScreen from './screens/LoadingScreen';
 
 export default App = () => {
   const [authenticated, setAuthenticated] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   // loggedIn = () => {
   //   return (
@@ -18,9 +20,12 @@ export default App = () => {
   // }
 
   return (
-    <NavigationContainer>
-      {/* {authenticated ? loggedIn() : notLoggedIn()} */}
-      {authenticated ? null : < AuthRoutes />}
-    </NavigationContainer>
+    <>
+      <NavigationContainer>
+        {/* {authenticated ? loggedIn() : notLoggedIn()} */}
+        {authenticated ? null : < AuthRoutes setLoading={setLoading} />}
+      </NavigationContainer>
+      {loading && <LoadingScreen message="Aguardando confirmação do convite..." />}
+    </>
   );
 };
