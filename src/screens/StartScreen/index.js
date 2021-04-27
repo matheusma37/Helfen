@@ -32,8 +32,8 @@ export default StartScreen = ({ navigation }) => {
         <SquareButton style={styles.moreInfo}>
           <GreenMidText>Quero saber mais!</GreenMidText>
         </SquareButton>
-        <SquareButton style={styles.createAccount}>
-          <WhiteMidText onPress={() => navigation.navigate('SignUp')}>Criar minha conta</WhiteMidText>
+        <SquareButton style={styles.createAccount} onPress={() => navigation.navigate('SignUp')}>
+          <WhiteMidText>Criar minha conta</WhiteMidText>
         </SquareButton>
         <EnterContainer>
           <EnterText>Já sou usuário </EnterText>

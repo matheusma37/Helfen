@@ -1,7 +1,7 @@
 import styled from 'styled-components/native';
 import { StyleSheet } from 'react-native';
 
-import { lightBlue, darkGreen, lightOrange } from '../../assets/colors';
+import { lightBlue, darkGreen } from '../../assets/colors';
 
 export const Container = styled.SafeAreaView`
   background-color: ${lightBlue};
@@ -11,23 +11,32 @@ export const Container = styled.SafeAreaView`
   align-items: center
 `;
 
+export const Section = styled.ScrollView`
+  flex: 0.8;
+`
+
 export const TopMessage = styled.View`
-  flex: 0.4;
-  align-items: flex-start
+  align-items: center;
+  padding: 0 2%;
 `;
 
-export const ButtonGroup = styled.View`
-  flex: 0.4;
-  align-items: center;
-  justify-content: flex-start
-`;
+export const Form = styled.View`
+  margin-top: 10px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center
+`
 
 export const RoundedButton = styled.TouchableOpacity`
-  height: 50px;
+  height: 35px;
   width: 300px;
   align-items: center;
   justify-content: center;
   border-radius: 35px;
+  border-style: solid;
+  border-color: white;
+  border-width: 2px;
+  margin-top: 20px;
 `;
 
 export const Footer = styled.View`
@@ -51,12 +60,8 @@ export const WhiteText = styled.Text`
 `;
 
 export const styles = StyleSheet.create({
-  patientButton: {
-    backgroundColor: lightOrange,
-    marginBottom: 15
-  },
-  psychologistButton: {
-    backgroundColor: darkGreen
+  textLink: {
+    textDecorationLine: 'underline'
   },
   shadowedButton: {
     shadowColor: 'black',
@@ -65,10 +70,7 @@ export const styles = StyleSheet.create({
       height: 5,
     },
     shadowOpacity: 0.3,
-    shadowRadius: 5.0,
-    elevation: 9
-  },
-  textLink: {
-    textDecorationLine: 'underline'
+    shadowRadius: 10.0,
+    elevation: 20
   }
 })
