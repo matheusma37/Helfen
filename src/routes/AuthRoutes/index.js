@@ -5,6 +5,7 @@ import ArrowBack from '../../components/ArrowBack';
 import StartScreen from '../../screens/StartScreen';
 import SignUpScreen from '../../screens/SignUpScreen';
 import InviteScreen from '../../screens/InviteScreen';
+import PatientSignUpScreen from '../../screens/PatientSignUpScreen';
 
 import { lightBlue, lightOrange } from '../../assets/colors'
 
@@ -47,6 +48,21 @@ const AuthRoutes = ({ setLoading }) => {
           }
         } >
         {(props) => <InviteScreen {...props} setLoading={setLoading} />}
+      </Stack.Screen>
+      <Stack.Screen
+        name="PatientSignUp"
+        options={
+          {
+            title: null,
+            headerStyle: {
+              backgroundColor: lightBlue
+            },
+            headerLeft: (props) => (
+              <ArrowBack {...props} />
+            )
+          }
+        } >
+        {(props) => <PatientSignUpScreen {...props} setLoading={setLoading} />}
       </Stack.Screen>
     </Stack.Navigator>
   );

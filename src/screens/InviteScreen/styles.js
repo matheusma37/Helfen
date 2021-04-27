@@ -18,6 +18,7 @@ export const Form = styled.View`
   justify-content: center;
   align-items: center
 `
+
 export const TextGroup = styled.View`
   flex-direction: column;
   justify-content: center;

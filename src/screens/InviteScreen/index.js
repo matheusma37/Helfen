@@ -15,8 +15,15 @@ import {
 import { lightOrange, midOrange, darkOrange } from '../../assets/colors';
 
 export default SignUpScreen = ({ navigation, setLoading }) => {
-  const [invite, onChangeInvite] = useState(null);
-  setTimeout(() => setLoading(true), 3000);
+  const [invite, onChangeInvite] = useState('');
+
+  function sendInviteCode(invite) {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      navigation.navigate('PatientSignUp');
+    }, 3000);
+  }
 
   return (
     <Container>
@@ -32,7 +39,7 @@ export default SignUpScreen = ({ navigation, setLoading }) => {
           placeholder="Insira seu convite aqui"
           textAlign="center"
         />
-        <RoundedButton style={styles.shadowedButton}>
+        <RoundedButton style={styles.shadowedButton} onPress={() => sendInviteCode(invite)}>
           <Gradient colors={[lightOrange, midOrange]}>
             <WhiteText>Pronto!</WhiteText>
           </Gradient>
