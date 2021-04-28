@@ -2,11 +2,11 @@ import styled from 'styled-components/native';
 import { StyleSheet } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 
-import { darkGreen, lightOrange } from '../../assets/colors';
+import { darkGreen } from '../../assets/colors';
 
 export const Container = styled.SafeAreaView`
-  background-color: ${lightOrange};
   flex: 1;
+  background-color: rgba(0,0,0,0.3);
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -41,6 +41,7 @@ export const Gradient = styled(LinearGradient)`
 export const InviteInput = styled.TextInput`
   width: 300px;
   height: 50px;
+  font-size: 18px;
   background-color: white;
   border-style: solid;
   border-width: 2px;

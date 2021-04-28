@@ -1,7 +1,8 @@
 import React from 'react';
-import { TouchableOpacity, StatusBar } from 'react-native';
+import { StatusBar, TouchableOpacity } from 'react-native';
 
 import Logo from './components/Logo';
+import BackgroundImage from '../../components/BackgroundImage';
 
 import {
   Container,
@@ -15,33 +16,37 @@ import {
   styles
 } from './styles';
 
-export default StartScreen = ({ navigation }) => {
+import image from '../../assets/images/start.jpg';
+
+export default StartScreen = ({ navigation, setImage }) => {
   return (
-    <Container>
-      <StatusBar barStyle='light-content' backgroundColor='rgba(0,0,0,0.15)' />
-      <Logo />
-      <Welcome>
-        <WhiteMidText>
-          Olá! Bem-vindo ao Helfen!
+    <BackgroundImage source={image} >
+      <Container>
+        <StatusBar barStyle='light-content' translucent={true} backgroundColor='rgba(0,0,0,0.15)' />
+        <Logo />
+        <Welcome>
+          <WhiteMidText>
+            Olá! Bem-vindo ao Helfen!
         </WhiteMidText>
-        <WhiteMidText>
-          Já nos conhece?
+          <WhiteMidText>
+            Já nos conhece?
         </WhiteMidText>
-      </Welcome>
-      <Footer>
-        <SquareButton style={styles.moreInfo}>
-          <GreenMidText>Quero saber mais!</GreenMidText>
-        </SquareButton>
-        <SquareButton style={styles.createAccount} onPress={() => navigation.navigate('SignUp')}>
-          <WhiteMidText>Criar minha conta</WhiteMidText>
-        </SquareButton>
-        <EnterContainer>
-          <EnterText>Já sou usuário </EnterText>
-          <TouchableOpacity>
-            <GreenMidText>Entrar</GreenMidText>
-          </TouchableOpacity>
-        </EnterContainer>
-      </Footer>
-    </Container >
+        </Welcome>
+        <Footer>
+          <SquareButton style={styles.moreInfo}>
+            <GreenMidText>Quero saber mais!</GreenMidText>
+          </SquareButton>
+          <SquareButton style={styles.createAccount} onPress={() => navigation.navigate('SignUp')}>
+            <WhiteMidText>Criar minha conta</WhiteMidText>
+          </SquareButton>
+          <EnterContainer>
+            <EnterText>Já sou usuário </EnterText>
+            <TouchableOpacity>
+              <GreenMidText>Entrar</GreenMidText>
+            </TouchableOpacity>
+          </EnterContainer>
+        </Footer>
+      </Container >
+    </BackgroundImage>
   );
 }

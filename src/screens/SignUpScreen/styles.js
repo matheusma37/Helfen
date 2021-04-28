@@ -1,11 +1,12 @@
 import styled from 'styled-components/native';
 import { StyleSheet } from 'react-native';
 
-import { lightBlue, darkGreen, lightOrange } from '../../assets/colors';
+import { darkGreen, lightOrange } from '../../assets/colors';
 
 export const Container = styled.SafeAreaView`
-  background-color: ${lightBlue};
   flex: 1;
+  background-color: rgba(0,0,0,0.3);
+  padding-top: 23%;
   flex-direction: column;
   justify-content: space-between;
   align-items: center
@@ -70,5 +71,10 @@ export const styles = StyleSheet.create({
   },
   textLink: {
     textDecorationLine: 'underline'
+  },
+  image: {
+    flex: 1,
+    resizeMode: "cover",
+    justifyContent: "center"
   }
 })
