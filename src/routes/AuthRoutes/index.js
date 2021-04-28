@@ -7,8 +7,6 @@ import SignUpScreen from '../../screens/SignUpScreen';
 import InviteScreen from '../../screens/InviteScreen';
 import PatientSignUpScreen from '../../screens/PatientSignUpScreen';
 
-import { lightBlue, lightOrange } from '../../assets/colors'
-
 const Stack = createStackNavigator();
 
 const AuthRoutes = ({ setLoading }) => {
@@ -16,7 +14,15 @@ const AuthRoutes = ({ setLoading }) => {
     <Stack.Navigator initialRouteName="Start">
       <Stack.Screen
         name="Start"
-        options={{ headerShown: false }}>
+        options={{
+          headerShown: false,
+          cardStyle: { backgroundColor: 'transparent', shadowColor: 'transparent' },
+          transitionConfig: () => ({
+            containerStyle: {
+              backgroundColor: 'transparent',
+            },
+          })
+        }}>
         {(props) => <StartScreen {...props} setLoading={setLoading} />}
       </Stack.Screen>
       <Stack.Screen
@@ -24,9 +30,13 @@ const AuthRoutes = ({ setLoading }) => {
         options={
           {
             title: null,
-            headerStyle: {
-              backgroundColor: lightBlue
-            },
+            headerTransparent: 'true',
+            cardStyle: { backgroundColor: 'transparent', shadowColor: 'transparent' },
+            transitionConfig: () => ({
+              containerStyle: {
+                backgroundColor: 'transparent',
+              },
+            }),
             headerLeft: (props) => (
               <ArrowBack {...props} />
             )
@@ -39,9 +49,13 @@ const AuthRoutes = ({ setLoading }) => {
         options={
           {
             title: null,
-            headerStyle: {
-              backgroundColor: lightOrange,
-            },
+            headerTransparent: 'true',
+            cardStyle: { backgroundColor: 'transparent', shadowColor: 'transparent' },
+            transitionConfig: () => ({
+              containerStyle: {
+                backgroundColor: 'transparent',
+              },
+            }),
             headerLeft: (props) => (
               <ArrowBack {...props} />
             )
@@ -54,9 +68,13 @@ const AuthRoutes = ({ setLoading }) => {
         options={
           {
             title: null,
-            headerStyle: {
-              backgroundColor: lightBlue
-            },
+            headerTransparent: 'true',
+            cardStyle: { backgroundColor: 'transparent', shadowColor: 'transparent' },
+            transitionConfig: () => ({
+              containerStyle: {
+                backgroundColor: 'transparent',
+              },
+            }),
             headerLeft: (props) => (
               <ArrowBack {...props} />
             )

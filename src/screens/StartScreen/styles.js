@@ -2,8 +2,8 @@ import styled from 'styled-components/native';
 import { StyleSheet } from 'react-native';
 
 export const Container = styled.SafeAreaView`
-  background-color: #E5E5E5;
   flex: 1;
+  background-color: rgba(0,0,0,0.3);
   align-items: center
 `;
 

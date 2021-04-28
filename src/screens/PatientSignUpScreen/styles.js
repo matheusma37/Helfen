@@ -1,11 +1,12 @@
 import styled from 'styled-components/native';
 import { StyleSheet } from 'react-native';
 
-import { lightBlue, darkGreen } from '../../assets/colors';
+import { darkGreen } from '../../assets/colors';
 
 export const Container = styled.SafeAreaView`
-  background-color: ${lightBlue};
   flex: 1;
+  padding-top: 23%;
+  background-color: rgba(0,0,0,0.3);
   flex-direction: column;
   justify-content: space-between;
   align-items: center

@@ -21,7 +21,7 @@ export default App = () => {
 
   return (
     <>
-      <NavigationContainer>
+      <NavigationContainer >
         {/* {authenticated ? loggedIn() : notLoggedIn()} */}
         {authenticated ? null : < AuthRoutes setLoading={setLoading} />}
       </NavigationContainer>

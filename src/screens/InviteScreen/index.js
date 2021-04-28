@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StatusBar } from 'react-native';
+import { StatusBar, ImageBackground } from 'react-native';
 
 import {
   Container,
@@ -12,7 +12,9 @@ import {
   styles
 } from './styles';
 
-import { lightOrange, midOrange, darkOrange } from '../../assets/colors';
+import BackgroundImage from '../../components/BackgroundImage';
+import { lightOrange, midOrange } from '../../assets/colors';
+import image from '../../assets/images/invite.jpg';
 
 export default SignUpScreen = ({ navigation, setLoading }) => {
   const [invite, onChangeInvite] = useState('');
@@ -26,25 +28,27 @@ export default SignUpScreen = ({ navigation, setLoading }) => {
   }
 
   return (
-    <Container>
-      <StatusBar barStyle='light-content' backgroundColor={darkOrange} />
-      <TextGroup>
-        <WhiteText>Você está com o convite aí?</WhiteText>
-        <WhiteText>Ótimo!</WhiteText>
-      </TextGroup>
-      <Form>
-        <InviteInput
-          onChangeText={onChangeInvite}
-          value={invite}
-          placeholder="Insira seu convite aqui"
-          textAlign="center"
-        />
-        <RoundedButton style={styles.shadowedButton} onPress={() => sendInviteCode(invite)}>
-          <Gradient colors={[lightOrange, midOrange]}>
-            <WhiteText>Pronto!</WhiteText>
-          </Gradient>
-        </RoundedButton>
-      </Form>
-    </Container >
+    <BackgroundImage source={image}>
+      <Container>
+        <StatusBar barStyle='light-content' translucent={true} backgroundColor='rgba(0,0,0,0.15)' />
+        <TextGroup>
+          <WhiteText>Você está com o convite aí?</WhiteText>
+          <WhiteText>Ótimo!</WhiteText>
+        </TextGroup>
+        <Form>
+          <InviteInput
+            onChangeText={onChangeInvite}
+            value={invite}
+            placeholder="Insira seu convite aqui"
+            textAlign="center"
+          />
+          <RoundedButton style={styles.shadowedButton} onPress={() => sendInviteCode(invite)}>
+            <Gradient colors={[lightOrange, midOrange]}>
+              <WhiteText>Pronto!</WhiteText>
+            </Gradient>
+          </RoundedButton>
+        </Form>
+      </Container >
+    </BackgroundImage>
   );
 }
