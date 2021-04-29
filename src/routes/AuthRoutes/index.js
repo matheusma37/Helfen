@@ -6,6 +6,7 @@ import StartScreen from '../../screens/StartScreen';
 import SignUpScreen from '../../screens/SignUpScreen';
 import InviteScreen from '../../screens/InviteScreen';
 import PatientSignUpScreen from '../../screens/PatientSignUpScreen';
+import PsychologistSignUpScreen from '../../screens/PsychologistSignUpScreen';
 
 const Stack = createStackNavigator();
 
@@ -81,6 +82,25 @@ const AuthRoutes = () => {
           }
         } >
         {(props) => <PatientSignUpScreen {...props} />}
+      </Stack.Screen>
+      <Stack.Screen
+        name="PsychologistSignUp"
+        options={
+          {
+            title: null,
+            headerTransparent: 'true',
+            cardStyle: { backgroundColor: 'transparent', shadowColor: 'transparent' },
+            transitionConfig: () => ({
+              containerStyle: {
+                backgroundColor: 'transparent',
+              },
+            }),
+            headerLeft: (props) => (
+              <ArrowBack {...props} />
+            )
+          }
+        } >
+        {(props) => <PsychologistSignUpScreen {...props} />}
       </Stack.Screen>
     </Stack.Navigator>
   );
