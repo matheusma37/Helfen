@@ -1,5 +1,5 @@
 import React from 'react';
-import { TouchableOpacity, StatusBar, ImageBackground } from 'react-native';
+import { TouchableOpacity, StatusBar } from 'react-native';
 
 import {
   Container,
@@ -30,7 +30,9 @@ export default SignUpScreen = ({ navigation }) => {
             onPress={() => navigation.navigate('Invite')}>
             <WhiteText>Eu tenho um convite!</WhiteText>
           </RoundedButton>
-          <RoundedButton style={[styles.psychologistButton, styles.shadowedButton]}>
+          <RoundedButton
+            style={[styles.psychologistButton, styles.shadowedButton]}
+            onPress={() => navigation.navigate('PsychologistSignUp')}>
             <WhiteText>Sou Psicólogo, quero contribuir!</WhiteText>
           </RoundedButton>
         </ButtonGroup >

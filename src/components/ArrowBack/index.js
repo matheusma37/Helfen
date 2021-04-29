@@ -6,7 +6,7 @@ const ArrowBack = (props) => {
     <Icon
       {...props}
       name={'west'}
-      color="#FFF"
+      color={props.disabled ? "rgba(255, 255, 255, 0.5)" : "#FFF"}
       size={35}
       style={{ marginLeft: 10 }} />
   )

@@ -10,6 +10,8 @@ import {
   PhoneInput
 } from '../components/Input';
 
+import CRPInput from './components/CRPInput';
+
 import {
   Container,
   Section,
@@ -25,9 +27,10 @@ import {
 import BackgroundImage from '../../components/BackgroundImage';
 import image from '../../assets/images/start.jpg';
 
-export default PatientSignUpScreen = ({ navigation }) => {
+export default PsychologistSignUpScreen = ({ navigation }) => {
   const [name, setName] = useState('');
   const [cpf, setCPF] = useState('');
+  const [crp, setCRP] = useState('');
   const [phone, setPhone] = useState('');
   const [dateOfBirth, setDateOfBirth] = useState('');
   const [email, setEmail] = useState('');
@@ -41,14 +44,11 @@ export default PatientSignUpScreen = ({ navigation }) => {
         <Section>
           <TopMessage>
             <WhiteText>
-              Oba!
-          </WhiteText>
+              Olá, seja bem-vindo!
+            </WhiteText>
             <WhiteText>
-              Será um prazer ter você por aqui!
-          </WhiteText>
-            <WhiteText>
-              Para começarmos, preencha completamente os campos abaixo:
-          </WhiteText>
+              Para começarmos a te auxiliar, precisamos que você preencha todos os campos abaixo para criarmos seu cadastro:
+            </WhiteText>
           </TopMessage>
           <Form>
             <NameInput
@@ -57,6 +57,9 @@ export default PatientSignUpScreen = ({ navigation }) => {
             <CPFInput
               value={cpf}
               setCPF={setCPF} />
+            <CRPInput
+              value={crp}
+              setCRP={setCRP} />
             <PhoneInput
               value={phone}
               setPhone={setPhone} />

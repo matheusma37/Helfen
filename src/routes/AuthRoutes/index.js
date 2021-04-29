@@ -6,10 +6,11 @@ import StartScreen from '../../screens/StartScreen';
 import SignUpScreen from '../../screens/SignUpScreen';
 import InviteScreen from '../../screens/InviteScreen';
 import PatientSignUpScreen from '../../screens/PatientSignUpScreen';
+import PsychologistSignUpScreen from '../../screens/PsychologistSignUpScreen';
 
 const Stack = createStackNavigator();
 
-const AuthRoutes = ({ setLoading }) => {
+const AuthRoutes = () => {
   return (
     <Stack.Navigator initialRouteName="Start">
       <Stack.Screen
@@ -23,7 +24,7 @@ const AuthRoutes = ({ setLoading }) => {
             },
           })
         }}>
-        {(props) => <StartScreen {...props} setLoading={setLoading} />}
+        {(props) => <StartScreen {...props} />}
       </Stack.Screen>
       <Stack.Screen
         name="SignUp"
@@ -42,7 +43,7 @@ const AuthRoutes = ({ setLoading }) => {
             )
           }
         } >
-        {(props) => <SignUpScreen {...props} setLoading={setLoading} />}
+        {(props) => <SignUpScreen {...props} />}
       </Stack.Screen>
       <Stack.Screen
         name="Invite"
@@ -61,7 +62,7 @@ const AuthRoutes = ({ setLoading }) => {
             )
           }
         } >
-        {(props) => <InviteScreen {...props} setLoading={setLoading} />}
+        {(props) => <InviteScreen {...props} />}
       </Stack.Screen>
       <Stack.Screen
         name="PatientSignUp"
@@ -80,7 +81,26 @@ const AuthRoutes = ({ setLoading }) => {
             )
           }
         } >
-        {(props) => <PatientSignUpScreen {...props} setLoading={setLoading} />}
+        {(props) => <PatientSignUpScreen {...props} />}
+      </Stack.Screen>
+      <Stack.Screen
+        name="PsychologistSignUp"
+        options={
+          {
+            title: null,
+            headerTransparent: 'true',
+            cardStyle: { backgroundColor: 'transparent', shadowColor: 'transparent' },
+            transitionConfig: () => ({
+              containerStyle: {
+                backgroundColor: 'transparent',
+              },
+            }),
+            headerLeft: (props) => (
+              <ArrowBack {...props} />
+            )
+          }
+        } >
+        {(props) => <PsychologistSignUpScreen {...props} />}
       </Stack.Screen>
     </Stack.Navigator>
   );
