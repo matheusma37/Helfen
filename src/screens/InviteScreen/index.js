@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { StatusBar } from 'react-native';
 
+import LoadingScreen from '../LoadingScreen';
+import ArrowBack from '../../components/ArrowBack';
+
 import {
   Container,
   Form,
@@ -16,13 +19,24 @@ import BackgroundImage from '../../components/BackgroundImage';
 import { lightOrange, midOrange } from '../../assets/colors';
 import image from '../../assets/images/invite.jpg';
 
-export default SignUpScreen = ({ navigation, setLoading }) => {
+export default SignUpScreen = ({ navigation }) => {
   const [invite, onChangeInvite] = useState('');
+  const [loading, setLoading] = useState(false);
 
   function sendInviteCode(invite) {
+    navigation.setOptions({
+      headerLeft: (props) => (
+        <ArrowBack disabled={true} {...props} />
+      )
+    });
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
+      navigation.setOptions({
+        headerLeft: (props) => (
+          <ArrowBack  {...props} />
+        )
+      });
       navigation.navigate('PatientSignUp');
     }, 3000);
   }
@@ -49,6 +63,7 @@ export default SignUpScreen = ({ navigation, setLoading }) => {
           </RoundedButton>
         </Form>
       </Container >
+      {loading && <LoadingScreen message="Aguardando confirmação do convite..." />}
     </BackgroundImage>
   );
 }

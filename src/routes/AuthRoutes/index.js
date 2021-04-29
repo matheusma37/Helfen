@@ -9,7 +9,7 @@ import PatientSignUpScreen from '../../screens/PatientSignUpScreen';
 
 const Stack = createStackNavigator();
 
-const AuthRoutes = ({ setLoading }) => {
+const AuthRoutes = () => {
   return (
     <Stack.Navigator initialRouteName="Start">
       <Stack.Screen
@@ -23,7 +23,7 @@ const AuthRoutes = ({ setLoading }) => {
             },
           })
         }}>
-        {(props) => <StartScreen {...props} setLoading={setLoading} />}
+        {(props) => <StartScreen {...props} />}
       </Stack.Screen>
       <Stack.Screen
         name="SignUp"
@@ -42,7 +42,7 @@ const AuthRoutes = ({ setLoading }) => {
             )
           }
         } >
-        {(props) => <SignUpScreen {...props} setLoading={setLoading} />}
+        {(props) => <SignUpScreen {...props} />}
       </Stack.Screen>
       <Stack.Screen
         name="Invite"
@@ -61,7 +61,7 @@ const AuthRoutes = ({ setLoading }) => {
             )
           }
         } >
-        {(props) => <InviteScreen {...props} setLoading={setLoading} />}
+        {(props) => <InviteScreen {...props} />}
       </Stack.Screen>
       <Stack.Screen
         name="PatientSignUp"
@@ -80,7 +80,7 @@ const AuthRoutes = ({ setLoading }) => {
             )
           }
         } >
-        {(props) => <PatientSignUpScreen {...props} setLoading={setLoading} />}
+        {(props) => <PatientSignUpScreen {...props} />}
       </Stack.Screen>
     </Stack.Navigator>
   );
