@@ -1,5 +1,5 @@
 import React from 'react';
-import { TouchableOpacity, StatusBar, ImageBackground } from 'react-native';
+import { TouchableOpacity, StatusBar } from 'react-native';
 
 import {
   Container,

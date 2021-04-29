@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { TouchableOpacity, StatusBar, ImageBackground } from 'react-native';
+import { TouchableOpacity, StatusBar } from 'react-native';
 
 import { CPFInput, DateOfBirthInput, EmailInput, NameInput, PasswordInput, PhoneInput } from './components';
 

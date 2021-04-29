@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StatusBar, ImageBackground } from 'react-native';
+import { StatusBar } from 'react-native';
 
 import {
   Container,
