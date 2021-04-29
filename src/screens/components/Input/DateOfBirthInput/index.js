@@ -8,7 +8,7 @@ export default DateOfBirthInput = ({ setDateOfBirth, ...props }) => {
       options={{
         format: 'DD/MM/YYYY'
       }}
-      placeholder="Data de Nascimento"
+      placeholder="Data de nascimento"
       {...props}
       maxLength={10}
       onChangeText={value => { setDateOfBirth(value) }}
