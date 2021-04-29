@@ -1,7 +1,14 @@
 import React, { useState } from 'react';
 import { TouchableOpacity, StatusBar } from 'react-native';
 
-import { CPFInput, DateOfBirthInput, EmailInput, NameInput, PasswordInput, PhoneInput } from './components';
+import {
+  CPFInput,
+  DateOfBirthInput,
+  EmailInput,
+  NameInput,
+  PasswordInput,
+  PhoneInput
+} from '../components/Input';
 
 import {
   Container,
@@ -18,7 +25,7 @@ import {
 import BackgroundImage from '../../components/BackgroundImage';
 import image from '../../assets/images/start.jpg';
 
-export default SignUpScreen = ({ navigation }) => {
+export default PatientSignUpScreen = ({ navigation }) => {
   const [name, setName] = useState('');
   const [cpf, setCPF] = useState('');
   const [phone, setPhone] = useState('');
