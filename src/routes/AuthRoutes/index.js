@@ -12,6 +12,20 @@ import PsychologistSignUpScreen from '../../screens/PsychologistSignUpScreen';
 const Stack = createStackNavigator();
 
 const AuthRoutes = () => {
+  const transparentHeader = {
+    title: null,
+    headerTransparent: 'true',
+    cardStyle: { backgroundColor: 'transparent', shadowColor: 'transparent' },
+    transitionConfig: () => ({
+      containerStyle: {
+        backgroundColor: 'transparent',
+      },
+    }),
+    headerLeft: (props) => (
+      <ArrowBack {...props} />
+    )
+  }
+
   return (
     <Stack.Navigator initialRouteName="Start">
       <Stack.Screen
@@ -27,101 +41,11 @@ const AuthRoutes = () => {
         }}>
         {(props) => <StartScreen {...props} />}
       </Stack.Screen>
-      <Stack.Screen
-        name="About"
-        options={
-          {
-            title: null,
-            headerTransparent: 'true',
-            cardStyle: { backgroundColor: 'transparent', shadowColor: 'transparent' },
-            transitionConfig: () => ({
-              containerStyle: {
-                backgroundColor: 'transparent',
-              },
-            }),
-            headerLeft: (props) => (
-              <ArrowBack {...props} />
-            )
-          }
-        } >
-        {(props) => <AboutScreen {...props} />}
-      </Stack.Screen>
-      <Stack.Screen
-        name="SignUp"
-        options={
-          {
-            title: null,
-            headerTransparent: 'true',
-            cardStyle: { backgroundColor: 'transparent', shadowColor: 'transparent' },
-            transitionConfig: () => ({
-              containerStyle: {
-                backgroundColor: 'transparent',
-              },
-            }),
-            headerLeft: (props) => (
-              <ArrowBack {...props} />
-            )
-          }
-        } >
-        {(props) => <SignUpScreen {...props} />}
-      </Stack.Screen>
-      <Stack.Screen
-        name="Invite"
-        options={
-          {
-            title: null,
-            headerTransparent: 'true',
-            cardStyle: { backgroundColor: 'transparent', shadowColor: 'transparent' },
-            transitionConfig: () => ({
-              containerStyle: {
-                backgroundColor: 'transparent',
-              },
-            }),
-            headerLeft: (props) => (
-              <ArrowBack {...props} />
-            )
-          }
-        } >
-        {(props) => <InviteScreen {...props} />}
-      </Stack.Screen>
-      <Stack.Screen
-        name="PatientSignUp"
-        options={
-          {
-            title: null,
-            headerTransparent: 'true',
-            cardStyle: { backgroundColor: 'transparent', shadowColor: 'transparent' },
-            transitionConfig: () => ({
-              containerStyle: {
-                backgroundColor: 'transparent',
-              },
-            }),
-            headerLeft: (props) => (
-              <ArrowBack {...props} />
-            )
-          }
-        } >
-        {(props) => <PatientSignUpScreen {...props} />}
-      </Stack.Screen>
-      <Stack.Screen
-        name="PsychologistSignUp"
-        options={
-          {
-            title: null,
-            headerTransparent: 'true',
-            cardStyle: { backgroundColor: 'transparent', shadowColor: 'transparent' },
-            transitionConfig: () => ({
-              containerStyle: {
-                backgroundColor: 'transparent',
-              },
-            }),
-            headerLeft: (props) => (
-              <ArrowBack {...props} />
-            )
-          }
-        } >
-        {(props) => <PsychologistSignUpScreen {...props} />}
-      </Stack.Screen>
+      <Stack.Screen name="About" options={transparentHeader} component={AboutScreen} />
+      <Stack.Screen name="SignUp" options={transparentHeader} component={SignUpScreen} />
+      <Stack.Screen name="Invite" options={transparentHeader} component={InviteScreen} />
+      <Stack.Screen name="PatientSignUp" options={transparentHeader} component={PatientSignUpScreen} />
+      <Stack.Screen name="PsychologistSignUp" options={transparentHeader} component={PsychologistSignUpScreen} />
     </Stack.Navigator>
   );
 }
