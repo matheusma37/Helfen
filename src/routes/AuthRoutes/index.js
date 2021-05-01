@@ -3,6 +3,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import ArrowBack from '../../components/ArrowBack';
 import StartScreen from '../../screens/StartScreen';
+import AboutScreen from '../../screens/AboutScreen';
 import SignUpScreen from '../../screens/SignUpScreen';
 import InviteScreen from '../../screens/InviteScreen';
 import PatientSignUpScreen from '../../screens/PatientSignUpScreen';
@@ -25,6 +26,25 @@ const AuthRoutes = () => {
           })
         }}>
         {(props) => <StartScreen {...props} />}
+      </Stack.Screen>
+      <Stack.Screen
+        name="About"
+        options={
+          {
+            title: null,
+            headerTransparent: 'true',
+            cardStyle: { backgroundColor: 'transparent', shadowColor: 'transparent' },
+            transitionConfig: () => ({
+              containerStyle: {
+                backgroundColor: 'transparent',
+              },
+            }),
+            headerLeft: (props) => (
+              <ArrowBack {...props} />
+            )
+          }
+        } >
+        {(props) => <AboutScreen {...props} />}
       </Stack.Screen>
       <Stack.Screen
         name="SignUp"
