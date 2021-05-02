@@ -8,7 +8,9 @@ import {
   ScrollDot
 } from './styles';
 
-import { darkGreen } from '../../assets/colors'
+import AboutUs from './components/AboutUs';
+
+import { darkGreen } from '../../assets/colors';
 
 export default AboutScreen = () => {
   const [sliderState, setSliderState] = useState({ currentPage: 0 });
@@ -40,6 +42,7 @@ export default AboutScreen = () => {
           onScroll={(event) => {
             setSliderPage(event);
           }} >
+          <AboutUs width={width} />
         </ScrollView>
       </ViewCard>
       <Footer>

@@ -10,7 +10,6 @@ export const Container = styled.SafeAreaView`
 
 export const ViewCard = styled.View`
   flex: 0.8;
-  padding-top: 25%;
   align-items: center;
   justify-content: center;
 `;
