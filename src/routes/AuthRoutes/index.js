@@ -16,6 +16,9 @@ const Stack = createStackNavigator();
 const AuthRoutes = () => {
   const transparentHeader = {
     title: null,
+    headerStyle: {
+      height: 60
+    },
     headerTransparent: 'true',
     cardStyle: { backgroundColor: 'transparent', shadowColor: 'transparent' },
     transitionConfig: () => ({
@@ -45,7 +48,8 @@ const AuthRoutes = () => {
           {
             title: null,
             headerStyle: {
-              backgroundColor: darkGreen
+              backgroundColor: darkGreen,
+              height: 60
             },
             headerLeft: (props) => <ArrowBack {...props} />
           }

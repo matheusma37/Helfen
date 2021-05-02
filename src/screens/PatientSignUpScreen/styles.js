@@ -5,7 +5,7 @@ import { darkGreen } from '../../assets/colors';
 
 export const Container = styled.SafeAreaView`
   flex: 1;
-  padding-top: 23%;
+  padding-top: 18%;
   background-color: rgba(0,0,0,0.3);
   flex-direction: column;
   justify-content: space-between;
