@@ -9,6 +9,8 @@ import InviteScreen from '../../screens/InviteScreen';
 import PatientSignUpScreen from '../../screens/PatientSignUpScreen';
 import PsychologistSignUpScreen from '../../screens/PsychologistSignUpScreen';
 
+import { darkGreen } from '../../assets/colors'
+
 const Stack = createStackNavigator();
 
 const AuthRoutes = () => {
@@ -21,9 +23,7 @@ const AuthRoutes = () => {
         backgroundColor: 'transparent',
       },
     }),
-    headerLeft: (props) => (
-      <ArrowBack {...props} />
-    )
+    headerLeft: (props) => <ArrowBack {...props} />
   }
 
   return (
@@ -38,10 +38,19 @@ const AuthRoutes = () => {
               backgroundColor: 'transparent',
             },
           })
-        }}>
-        {(props) => <StartScreen {...props} />}
-      </Stack.Screen>
-      <Stack.Screen name="About" options={transparentHeader} component={AboutScreen} />
+        }} component={StartScreen} />
+      <Stack.Screen
+        name="About"
+        options={
+          {
+            title: null,
+            headerStyle: {
+              backgroundColor: darkGreen
+            },
+            headerLeft: (props) => <ArrowBack {...props} />
+          }
+        }
+        component={AboutScreen} />
       <Stack.Screen name="SignUp" options={transparentHeader} component={SignUpScreen} />
       <Stack.Screen name="Invite" options={transparentHeader} component={InviteScreen} />
       <Stack.Screen name="PatientSignUp" options={transparentHeader} component={PatientSignUpScreen} />
