@@ -18,7 +18,7 @@ import {
 
 import image from '../../assets/images/start.jpg';
 
-export default StartScreen = ({ navigation, setImage }) => {
+export default StartScreen = ({ navigation }) => {
   return (
     <BackgroundImage source={image} >
       <Container>
@@ -33,7 +33,7 @@ export default StartScreen = ({ navigation, setImage }) => {
         </WhiteMidText>
         </Welcome>
         <Footer>
-          <SquareButton style={styles.moreInfo}>
+          <SquareButton style={styles.moreInfo} onPress={() => navigation.navigate('About')}>
             <GreenMidText>Quero saber mais!</GreenMidText>
           </SquareButton>
           <SquareButton style={styles.createAccount} onPress={() => navigation.navigate('SignUp')}>
