@@ -9,6 +9,7 @@ import {
 } from './styles';
 
 import AboutUs from './components/AboutUs';
+import Functionalities from './components/Functionalities';
 
 import { darkGreen } from '../../assets/colors';
 
@@ -43,6 +44,7 @@ export default AboutScreen = () => {
             setSliderPage(event);
           }} >
           <AboutUs width={width} />
+          <Functionalities width={width} />
         </ScrollView>
       </ViewCard>
       <Footer>
