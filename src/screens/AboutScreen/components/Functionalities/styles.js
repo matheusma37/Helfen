@@ -31,6 +31,17 @@ export const Content = styled.View`
   justify-content: center;
 `;
 
+export const ContentSeparator = styled.Text`
+  color: ${midGray};
+  font-family: Montserrat-Regular;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 18px;
+  align-self: flex-start;
+  margin: 10px;
+  margin-bottom: 0;
+`;
+
 export const Card = styled.View`
   flex: 1;
   flex-direction: row;
@@ -42,7 +53,7 @@ export const Card = styled.View`
   border-bottom-width: 1px;
 `
 
-export const ContentText = styled.Text`
+export const CardText = styled.Text`
   color: ${midGray};
   font-family: Montserrat-Regular;
   font-style: normal;

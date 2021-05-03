@@ -6,9 +6,10 @@ import {
   Header,
   HeaderText,
   Content,
+  ContentSeparator,
   Card,
   Dot,
-  ContentText,
+  CardText,
 } from './styles'
 
 export default Functionalities = ({ ...props }) => {
@@ -18,6 +19,7 @@ export default Functionalities = ({ ...props }) => {
         <HeaderText>Funcionalidades</HeaderText>
       </Header>
       <Content>
+        <ContentSeparator>Psicólogo</ContentSeparator>
         <Card>
           <Icon
             name='flag-variant'
@@ -25,9 +27,9 @@ export default Functionalities = ({ ...props }) => {
             color="#000"
             style={{ marginRight: 5 }} />
           <Dot />
-          <ContentText>
-            Funcionalidade aqui!!!
-          </ContentText>
+          <CardText>
+            Manter pacientes
+          </CardText>
         </Card>
         <Card>
           <Icon
@@ -36,9 +38,9 @@ export default Functionalities = ({ ...props }) => {
             color="#000"
             style={{ marginRight: 5 }} />
           <Dot />
-          <ContentText>
-            Funcionalidade aqui!!!
-          </ContentText>
+          <CardText>
+            Manter consultas
+          </CardText>
         </Card>
         <Card>
           <Icon
@@ -47,9 +49,9 @@ export default Functionalities = ({ ...props }) => {
             color="#000"
             style={{ marginRight: 5 }} />
           <Dot />
-          <ContentText>
-            Funcionalidade aqui!!!
-          </ContentText>
+          <CardText>
+            Manter conta
+          </CardText>
         </Card>
         <Card>
           <Icon
@@ -58,9 +60,54 @@ export default Functionalities = ({ ...props }) => {
             color="#000"
             style={{ marginRight: 5 }} />
           <Dot />
-          <ContentText>
-            Funcionalidade aqui!!!
-          </ContentText>
+          <CardText>
+            Ver relatórios
+          </CardText>
+        </Card>
+        <ContentSeparator>Paciente</ContentSeparator>
+        <Card>
+          <Icon
+            name='flag-variant'
+            size={48}
+            color="#000"
+            style={{ marginRight: 5 }} />
+          <Dot />
+          <CardText>
+            Manter relatórios
+          </CardText>
+        </Card>
+        <Card>
+          <Icon
+            name='flag-variant'
+            size={48}
+            color="#000"
+            style={{ marginRight: 5 }} />
+          <Dot />
+          <CardText>
+            Manter conta
+          </CardText>
+        </Card>
+        <Card>
+          <Icon
+            name='flag-variant'
+            size={48}
+            color="#000"
+            style={{ marginRight: 5 }} />
+          <Dot />
+          <CardText>
+            Marcar consulta
+          </CardText>
+        </Card>
+        <Card>
+          <Icon
+            name='flag-variant'
+            size={48}
+            color="#000"
+            style={{ marginRight: 5 }} />
+          <Dot />
+          <CardText>
+            Remarcar consulta
+          </CardText>
         </Card>
         <Icon
           name='flag-variant'
