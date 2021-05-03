@@ -38,7 +38,7 @@ export default PatientSignUpScreen = ({ navigation }) => {
     <BackgroundImage source={image}>
       <Container>
         <StatusBar barStyle='light-content' translucent={true} backgroundColor='rgba(0,0,0,0.15)' />
-        <Section>
+        <Section showsVerticalScrollIndicator={false}>
           <TopMessage>
             <WhiteText>
               Oba!
