@@ -37,7 +37,7 @@ export const TextGroup = styled.View`
   width: 100%;
   align-items: flex-start;
   padding: 0 3%;
-  margin-top: 20px;
+  margin-top: 10px;
 `;
 
 export const Form = styled.View`
@@ -105,19 +105,3 @@ export const Footer = styled.View`
   width: 100%;
   background-color: rgba(0,0,0,0.3);
 `;
-
-export const styles = StyleSheet.create({
-  shadowedButton: {
-    shadowColor: 'black',
-    shadowOffset: {
-      width: 0,
-      height: 5,
-    },
-    shadowOpacity: 0.3,
-    shadowRadius: 5.0,
-    elevation: 9
-  },
-  textLink: {
-    textDecorationLine: 'underline'
-  }
-})

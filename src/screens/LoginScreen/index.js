@@ -11,19 +11,23 @@ import {
   GrayText,
   GreenText,
   Header,
-  Input,
   InputGroup,
   RoundedButton,
   RoundedView,
   TextGroup,
-  WhiteText,
-  styles
+  WhiteText
 } from './styles';
+
+import EmailInput from './components/EmailInput';
+import PasswordInput from './components/PasswordInput';
 
 import image from '../../assets/images/start.jpg';
 
 export default LoginScreen = ({ navigation }) => {
   const [keyboardStatus, setKeyboardStatus] = useState(false);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
   const _keyboardDidShow = () => setKeyboardStatus(!keyboardStatus);
   const _keyboardDidHide = () => setKeyboardStatus(!keyboardStatus);
 
@@ -50,22 +54,20 @@ export default LoginScreen = ({ navigation }) => {
           <KeyboardAvoidingView behavior="position">
             <Form>
               <InputGroup>
-                <Input
-                  placeholder="E-mail"
-                  keyboardType={"email-address"}>
-                </Input>
-                <Input
-                  placeholder="Senha"
-                  secureTextEntry={true}
-                  style={{ borderTopWidth: 0 }}>
-                </Input>
+                <EmailInput
+                  value={email}
+                  onChangeText={text => setEmail(text)} />
+                <PasswordInput
+                  style={{ borderTopWidth: 0 }}
+                  value={password}
+                  onChangeText={text => setPassword(text)} />
               </InputGroup>
               <RoundedButton>
                 <WhiteText>Entrar</WhiteText>
               </RoundedButton>
             </Form>
           </KeyboardAvoidingView>
-          {keyboardStatus ? null :
+          {!keyboardStatus &&
             <RoundedView>
               <GrayText style={{ fontSize: 14 }}>Ainda não possui uma conta? </GrayText>
               <TouchableOpacity>
