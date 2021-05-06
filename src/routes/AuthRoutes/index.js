@@ -8,6 +8,7 @@ import SignUpScreen from '../../screens/SignUpScreen';
 import InviteScreen from '../../screens/InviteScreen';
 import PatientSignUpScreen from '../../screens/PatientSignUpScreen';
 import PsychologistSignUpScreen from '../../screens/PsychologistSignUpScreen';
+import LoginScreen from '../../screens/LoginScreen';
 
 import { darkGreen } from '../../assets/colors'
 
@@ -59,6 +60,7 @@ const AuthRoutes = () => {
       <Stack.Screen name="Invite" options={transparentHeader} component={InviteScreen} />
       <Stack.Screen name="PatientSignUp" options={transparentHeader} component={PatientSignUpScreen} />
       <Stack.Screen name="PsychologistSignUp" options={transparentHeader} component={PsychologistSignUpScreen} />
+      <Stack.Screen name="Login" options={{ headerShown: false }} component={LoginScreen} />
     </Stack.Navigator>
   );
 }
