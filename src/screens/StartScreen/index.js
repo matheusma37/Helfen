@@ -41,7 +41,7 @@ export default StartScreen = ({ navigation }) => {
           </SquareButton>
           <EnterContainer>
             <EnterText>Já sou usuário </EnterText>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate('Login')}>
               <GreenMidText>Entrar</GreenMidText>
             </TouchableOpacity>
           </EnterContainer>
