@@ -41,11 +41,11 @@ const LoggedRoutes = () => {
           )
         }} />
       <Tab.Screen
-        name="Consultas"
+        name="Calendario"
         component={HomeScreen}
         options={{
           tabBarIcon: ({ size, color }) => (
-            <Icon name='date-range' color={color} size={size} />
+            <Icon name='event-note' color={color} size={size} />
           )
         }} />
     </Tab.Navigator>
