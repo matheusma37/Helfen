@@ -70,7 +70,7 @@ export default LoginScreen = ({ navigation }) => {
           {!keyboardStatus &&
             <RoundedView>
               <GrayText style={{ fontSize: 14 }}>Ainda não possui uma conta? </GrayText>
-              <TouchableOpacity>
+              <TouchableOpacity onPress={() => navigation.navigate('SignUp')}>
                 <GreenText>Cadastre-se</GreenText>
               </TouchableOpacity>
             </RoundedView>}

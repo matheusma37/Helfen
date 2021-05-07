@@ -79,7 +79,7 @@ export default PatientSignUpScreen = ({ navigation }) => {
         </Section>
         <Footer>
           <WhiteText>Já tenho uma conta. </WhiteText>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate('Login')}>
             <GreenText style={styles.textLink}>Fazer Login</GreenText>
           </TouchableOpacity>
         </Footer>
