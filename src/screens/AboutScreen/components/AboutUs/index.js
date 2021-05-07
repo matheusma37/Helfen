@@ -24,7 +24,7 @@ export default AboutUs = ({ ...props }) => {
         </Paragraph>
         <Paragraph>
           <ContentText>
-            A ideia surgiu em 2018 como tema do Trabalho de Conclusão de Curso, no Instituto Federal Fluminense, por Everton Gonçalves e Mariana Vieira, ambos alunos do curso de Bacharelado em Sistemas de Informação.
+            A ideia surgiu em 2018 como tema do Trabalho de Conclusão de Curso, no Instituto Federal Fluminense, por Mariana Vieira e Matheus Machado, ambos alunos do curso de Bacharelado em Sistemas de Informação.
           </ContentText>
         </Paragraph>
         <Icon
