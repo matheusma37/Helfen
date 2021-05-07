@@ -46,7 +46,7 @@ export default LoginScreen = ({ navigation }) => {
       <Container>
         <StatusBar barStyle='light-content' translucent={true} backgroundColor='rgba(0,0,0,0.15)' />
         <Header />
-        <Content style={keyboardStatus && { height: '100%' }}>
+        <Content style={keyboardStatus && { height: '100%', borderWidth: 0, paddingTop: 40 }}>
           <TextGroup>
             <GrayText>Que bom ter você de volta! 😃</GrayText>
             <GrayText>Por favor, faça seu login:</GrayText>

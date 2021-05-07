@@ -31,6 +31,9 @@ export const Content = styled.View`
   justify-content: center;
   position: absolute;
   background-color: white;
+  border: 40px solid ${lightBlue};
+  border-left-width: 0;
+  border-right-width: 0;
 `;
 
 export const TextGroup = styled.View`
@@ -92,11 +95,12 @@ export const WhiteText = styled.Text`
 
 export const RoundedView = styled.View`
   flex-direction: row;
+  align-items: center;
   height: 35px;
   padding: 0 10px;
   border: 2px solid ${lightBlue};
   border-radius: 25px;
-  align-items: center;
+  margin-bottom: 10px;
 `;
 
 export const Footer = styled.View`
